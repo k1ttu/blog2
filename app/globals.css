@@ -4,7 +4,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    
     --background-start-rgb: 246	238	227;
     --background-end-rgb: 246	238	227;
   }

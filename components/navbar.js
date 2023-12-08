@@ -6,8 +6,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useRouter } from 'next/navigation';
 export default function Navbar3() {
     const [show, setShow] = useState(false);
-    const navlink2 = "block text-2xl text-gray-600 my-3 hover:underline hover:underline-offset-4 animate__animated";
-    const navlink = "text-sm font-mono text-gray-600 no-underline hover:underline hover:transition-all hover:duration-100 hover:ease-in-out";
+    const navlink2 = " text-2xl text-gray-600 my-3 animate__animated";
+    const navlink = "text-sm no-underline text-gray-600 font-mono relative text-gray-700 py-3 pb-1 px-2 after:bg-gray-400 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+    const navHover="relative after:bg-gray-600 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
     const handleClose = () => {
         setShow(false)
         router.refresh();
@@ -29,28 +30,27 @@ export default function Navbar3() {
     const router = useRouter();
 
     return (
-        <nav className='flex justify-between md:mx-16 md:py-10 mx-8 py-4 animate__animated animate__fadeInDown'>
-            <a href="/" className={navlink}>
+        <nav className='flex justify-between h-px md:mx-16 md:py-10 mx-8 py-4 animate__animated animate__fadeInDown'>
+            <Link href="/" className={ navlink + navHover }>
                 Chirag
-            </a>
+            </Link>
             <ul className='md:flex hidden list-none'>
                 {
                     navbarDB.map((item, index) => {
-                        
                             return (
                                 <li key={index} className={'mr-5'} >
-                                    <Link href={item.link} className={navlink}>
+                                    <Link href={item.link} className={ navlink }>
 
                                         {item.title}
 
                                     </Link>
                                 </li>)
-                        
+
                     }
                     )
                 }
                 <li key={"3"}className={'mr-0'} >
-                    <Link href="mailto:chirag.kun@icloud.com" className={navlink}>
+                    <Link href="mailto:chirag.kun@icloud.com" className={ navlink + navHover }>
                         Contact
                     </Link>
 
