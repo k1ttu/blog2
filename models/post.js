@@ -1,37 +1,36 @@
-import mongoose , {Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 
 
 const PostSchema = new mongoose.Schema(
     {
-        title:{
+        title: {
             type: String,
-            trim:true,
+            trim: true,
             required: true,
         },
-        content:[{
-            type:String,
-            required:true
+        content: [{
+            type: String
         }],
         datePosted:{
-            type: Date,
-            default:Date.now,
+            type:String,
+            required:true
         },
-        comments:[
+        comments: [
             {
-                name:{
-                    type:String,
-                    default:"Reader"
+                name: {
+                    type: String,
+                    default: "Reader"
                 },
-                comments:{
-                    type:String,
-                    trim:true,
+                comments: {
+                    type: String,
+                    trim: true,
                 }
             }
         ]
     }
 );
 
-const Post = mongoose.models.Post || mongoose.model("Post" , PostSchema);
+const Post = mongoose.models.Post || mongoose.model("Post", PostSchema);
 
 export default Post;

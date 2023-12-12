@@ -30,19 +30,19 @@ export default function Home() {
           <li>
             <Link className={contentFont + "no-underline"} href="mailto:chirag/kun@icloud.com">
             <span className='hover:no-underline no-underline'>→ </span>
-              <span className='relative text-gray-700 text-md md:text-xl py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-full after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Mail</span>
+              <span className='relative md:after:w-0 text-gray-700 text-md md:text-xl py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-full after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Mail</span>
             </Link>
             </li>
             <li>
             <Link className={contentFont + "no-underline"} href="https://www.linkedin.com/in/chirag-sharma-0551a1260/">
               <span className='hover:no-underline no-underline'>→ </span>
-              <span className='relative text-md text-gray-700 md:text-xl py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-full after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>LinkedIn</span>
+              <span className='relative text-md text-gray-700 md:text-xl py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px md:after:w-0 after:w-full after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>LinkedIn</span>
             </Link>
             </li>
             <li>
             <Link className={contentFont + "no-underline "} href="https://github.com/k1ttu">
             <span className='hover:no-underline no-underline'>→ </span>
-              <span className= 'relative text-md text-gray-700 md:text-xl py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-full after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>GitHub</span>
+              <span className= 'relative text-md text-gray-700 md:text-xl py-3 pb-1 px-6 after:bg-gray-600 after:absolute md:after:w-0 after:h-px after:w-full after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>GitHub</span>
             </Link>
           </li>
         </ul>
