@@ -16,28 +16,28 @@ function findPost(id) {
     }
 }
 
-// export const db = [
-//     {
-//         title: "Hello Saar",
-//         date: "12/10/20",
-//         content: [`Come to eendia saar`, `He's
-//         right saar, come to eendia saar`],
-//         id: 1234565,
-//         comments: [{
-//             name:"Hello saar, big fan saar",
-//             comments:"He right saar, me also big fan saar nalfnea nkeb kjab ekb ekabr k bakrb kaerb ke brjhabr hjrbe rjva rea"
-//         },
-//         {
-//             name:"Hello saar, big fan saar",
-//             comments:"He right saar, me also big fan saar nalfnea nkeb kjab ekb ekabr k bakrb kaerb ke brjhabr hjrbe rjva rea"
-//         },
-//         {
-//             name:"Hello saar, big fan saar",
-//             comments:"He right saar, me also big fan saar nalfnea nkeb kjab ekb ekabr k bakrb kaerb ke brjhabr hjrbe rjva rea"
-//         }
-//         ]
-//     }
-// ]
+export const db = [
+    {
+        title: "Hello Saar",
+        date: "12/10/20",
+        content: [`Come to eendia saar`, `He's
+        right saar, come to eendia saar`],
+        id: 1234565,
+        comments: [{
+            name:"Hello saar, big fan saar",
+            comments:"He right saar, me also big fan saar nalfnea nkeb kjab ekb ekabr k bakrb kaerb ke brjhabr hjrbe rjva rea"
+        },
+        {
+            name:"Hello saar, big fan saar",
+            comments:"He right saar, me also big fan saar nalfnea nkeb kjab ekb ekabr k bakrb kaerb ke brjhabr hjrbe rjva rea"
+        },
+        {
+            name:"Hello saar, big fan saar",
+            comments:"He right saar, me also big fan saar nalfnea nkeb kjab ekb ekabr k bakrb kaerb ke brjhabr hjrbe rjva rea"
+        }
+        ]
+    }
+]
 export default function Page({ params }) {
     const { id } = params;
     const item = findPost(id);

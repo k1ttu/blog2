@@ -1,4 +1,4 @@
-import JournalContent from '@/components/journalContent';
+import { JournalContent } from '@/components/journalContent';
 import 'animate.css'
 
 import Link from 'next/link';
@@ -47,13 +47,11 @@ export default function Journal() {
 
             <div className='w-full items-start animate__animated animate__fadeIn animate__delay-2s'>
 
-                {/* <ul className='list-none my-10 animate__animated animate__fadeIn animate__delay-2s'>
-                    <JournalContent/>
-                </ul> */}
-                <ul className='list-none my-10'>
-                    <JournalContent/>
+                <ul className='list-none my-10 animate__animated animate__fadeIn animate__delay-2s'>
+                    <JournalContent /> 
                 </ul>
-                <ul className='list-none my-10'>
+               
+                 <ul className='list-none my-10'>
                     {
                         db.map((item, index) => {
 

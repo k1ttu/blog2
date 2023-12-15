@@ -1,8 +1,7 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
-
-
-const PostSchema = new mongoose.Schema(
+const {Schema} = mongoose;
+const PostSchema = new Schema(
     {
         title: {
             type: String,
@@ -13,24 +12,24 @@ const PostSchema = new mongoose.Schema(
             type: String
         }],
         datePosted:{
-            type:String,
-            required:true
+            type:Date,
+            default:Date.now()
         },
         comments: [
             {
                 name: {
-                    type: String,
-                    default: "Reader"
+                    type: String
                 },
-                comments: {
+                comment: {
                     type: String,
                     trim: true,
                 }
             }
         ]
+    },
+    {
+        timestamps:true
     }
 );
 
-const Post = mongoose.models.Post || mongoose.model("Post", PostSchema);
-
-export default Post;
+export default mongoose.model("Post" , PostSchema);
