@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-const {Schema} = mongoose;
-const PostSchema = new Schema(
+var PostSchema = new Schema(
     {
         title: {
             type: String,
@@ -9,27 +9,17 @@ const PostSchema = new Schema(
             required: true,
         },
         content: [{
-            type: String
+            type: String,
+            trim:true
         }],
         datePosted:{
             type:Date,
             default:Date.now()
-        },
-        comments: [
-            {
-                name: {
-                    type: String
-                },
-                comment: {
-                    type: String,
-                    trim: true,
-                }
-            }
-        ]
+        }
     },
     {
         timestamps:true
     }
 );
 
-export default mongoose.model("Post" , PostSchema);
+export default mongoose.models.Post || mongoose.model('Post', PostSchema);

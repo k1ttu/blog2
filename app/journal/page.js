@@ -1,30 +1,8 @@
+
 import { JournalContent } from '@/components/journalContent';
 import 'animate.css'
 
 import Link from 'next/link';
-
-
-export const db = [
-    {
-        title: "Hello Saar",
-        date: "12/10/20",
-        content: ["Come to eendia saar", "He's right saar, come to eendia saar"],
-        id: 1234565
-    }
-    ,
-    {
-        title: "Hello Saar",
-        date: "12/10/20",
-        content: ["Come to eendia saar", "He's right saar, come to eendia saar"],
-        id: 1234565
-    },
-    {
-        title: "Hello Saar",
-        date: "12/10/20",
-        content: ["Come to eendia saar", "He's right saar, come to eendia saar"],
-        id: 1234565
-    }
-]
 
 export default function Journal() {
     const contentFont = "md:text-lg text-base text-gray-700 font-light my-4 mb-3 ";
@@ -48,41 +26,9 @@ export default function Journal() {
             <div className='w-full items-start animate__animated animate__fadeIn animate__delay-2s'>
 
                 <ul className='list-none my-10 animate__animated animate__fadeIn animate__delay-2s'>
-                    <JournalContent /> 
-                </ul>
-               
-                 <ul className='list-none my-10'>
-                    {
-                        db.map((item, index) => {
-
-                            return (
-                                <li key={index} id={`${item}`} className={'mb-14 ' + 'relative py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'} >
-                                    <Link href={`./journal/${item.id}`} className='no-underline'>
-                                        <div className='flex justify-between  '>
-                                            <h1 className='text-2xl md:text-3xl mb-2 text-gray-700'>
-                                                {item.title}
-                                            </h1>
-                                            <p className={"text-gray-500 text-md md:text-lg mb-2 relative py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"}>
-                                                Read More
-                                            </p>
-                                        </div>
-                                        <div className={contentFont2 + "text-left"}>
-                                            {item.date}
-                                        </div>
-                                        <div className={contentFont2 + "text-left"}>
-                                            <p className={contentFont}>
-                                                {item.content.at(0)}.....
-                                            </p>
-
-                                        </div>
-                                    </Link>
-                                </li>
-                            )
-                        })
-                    }
+                <JournalContent/>
                 </ul>
             </div>
         </main>
     )
 }
-

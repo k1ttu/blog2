@@ -1,16 +1,9 @@
 import mongoose from "mongoose";
 
-const connectMongoDB = async () =>{
+export const dbConnect = async()=>{
     try{
-        await mongoose.connect(process.env.MONGOURI,
-            {
-            useNewUrlParser:true,
-            useUnifiedTopology:true
-        });
-        console.log("Connected to MongoDB")
-    }catch(error){
-        console.log(error);
+        await mongoose.connect(process.env.MONGOURI);
+    }catch(err){
+        console.log("Failed to connect to mongodb: " , err)
     }
-};
-
-export default connectMongoDB;
+}
