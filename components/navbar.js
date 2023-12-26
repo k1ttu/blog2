@@ -1,15 +1,17 @@
 'use client'
 
 import Link from 'next/link';
-import { use, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useState } from 'react';
+
+import { Offcanvas } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 export default function Navbar3() {
     const [show, setShow] = useState(false);
     const navlink2 = " text-2xl text-gray-600 my-3 animate__animated";
-    const navlink = "text-sm no-underline text-gray-600 font-mono relative text-gray-700 py-3 pb-1 px-2 after:bg-gray-400 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
-    const navHover="relative after:bg-gray-600 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+    const navlink = "text-sm no-underline text-gray-600 font-mono relative text-gray-700 py-3 pb-1 px-2 after:bg-gray-400 after:absolute after:h-0.5 after:w-0 after:bottom-0  after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+    const navlink_ = "text-sm no-underline text-gray-600 font-mono relative text-gray-700 py-3 pb-1 px-2 after:bg-gray-400 after:absolute after:top-10 after:h-0.5 after:w-0 after:bottom-0  after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+    const navhover_ = "relative py-3 text-sm font-base pb-1 font-mono px-6 after:bg-gray-600 after:absolute md:after:w-0 after:h-px after:w-fit after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+    const navHover = "relative after:bg-gray-600 after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
     const handleClose = () => {
         setShow(false)
         router.refresh();
@@ -32,26 +34,29 @@ export default function Navbar3() {
 
     return (
         <nav className='flex justify-between h-px md:mx-16 md:py-10 mx-8 py-4 animate__animated animate__fadeInDown'>
-            <Link href="/" className={ navlink + navHover }>
+            
+            <Link href="/" className={navlink_ }>
                 Chirag
             </Link>
+            
             <ul className='md:flex hidden list-none'>
                 {
                     navbarDB.map((item, index) => {
-                            return (
-                                <li key={index} className={'mr-5'} >
-                                    <Link href={item.link} className={ navlink }>
+                        return (
+                            <li key={index} className={'mr-5'} >
+                                <Link href={item.link} className={navlink}>
 
-                                        {item.title}
+                                    {item.title}
 
-                                    </Link>
-                                </li>)
+                                </Link>
+                            </li>)
 
                     }
                     )
                 }
-                <li key={"3"}className={'mr-0'} >
-                    <Link href="mailto:chirag.kun@icloud.com" className={ navlink + navHover }>
+                
+                <li key={"3"} className={'mr-0'} >
+                    <Link href="mailto:chirag.kun@icloud.com" className={navlink}>
                         Contact
                     </Link>
 
@@ -64,7 +69,7 @@ export default function Navbar3() {
                 <div className={"bar block h-[3px] w-full rounded-md bg-black my-1 "}></div>
             </button>
 
-            <Offcanvas className="md:hidden" show={show} onHide={handleClose} placement='start' responsive='md'>
+            <Offcanvas className="md:hidden bg-bgbg" show={show} onHide={handleClose} placement='start' responsive='md'>
                 <Offcanvas.Header closeButton >
                 </Offcanvas.Header>
                 <Offcanvas.Body className='md:hidden'>
@@ -83,5 +88,6 @@ export default function Navbar3() {
                 </Offcanvas.Body>
             </Offcanvas>
         </nav>
+
     );
 }

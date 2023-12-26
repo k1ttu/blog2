@@ -2,7 +2,7 @@
 import { JournalContent } from '@/components/journalContent';
 import 'animate.css'
 
-import Link from 'next/link';
+
 
 export default function Journal() {
     const contentFont = "md:text-lg text-base text-gray-700 font-light my-4 mb-3 ";

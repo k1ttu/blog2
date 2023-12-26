@@ -1,5 +1,5 @@
-import { JournalContent } from "@/components/journalContent";
-import getPosts1 from "@/controllers/getPosts";
+
+
 import getSinglePost1 from "@/controllers/getSinglePost";
 import React from "react";
 
@@ -28,4 +28,3 @@ export default async function Post({ params: { id } }) {
         </main>
     )
 }
-

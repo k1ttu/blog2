@@ -20,6 +20,6 @@
   align-items: center;
 }
 
-body {
+html,body {
   background:  rgb(var(--background-end-rgb));
 }

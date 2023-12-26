@@ -2,7 +2,7 @@
 import getPosts1 from "@/controllers/getPosts";
 import getPostss, { getPosts } from "@/controllers/getPosts";
 import Link from "next/link";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 export const JournalContent = async () => {
     {/*const [posts2, setPosts2] = useState([]);
 
@@ -21,7 +21,8 @@ export const JournalContent = async () => {
     } catch (error) {
         alert("some error occurred");
     }*/}
-    const postsss = await getPosts1();
+    const postsss1 = await getPosts1();
+    const postsss = postsss1.reverse();
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
@@ -30,7 +31,7 @@ export const JournalContent = async () => {
     const contentFont2 = "md:text-lg text-base text-gray-700 font-light my-4 mb-3 ";
     return (
 
-        <ul className='list-none my-10 journal-content'>
+        <ul className='list-none flex flex-col justify-stsar my-10 journal-content'>
             {/*
                 posts.map((item) => {
                     return (
@@ -62,7 +63,7 @@ export const JournalContent = async () => {
             {
                 postsss?.map((item) => {
                     return (
-                        <li key={item._id} id={item._id} className={'mb-14 ' + 'relative py-3 pb-1 px-6 after:bg-gray-600 after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'} >
+                        <li key={item._id} id={item._id} className={'mb-14 ' + ' items-start justify-start relative py-3 pb-1 px-0 mx-0 after:bg-gray-600 after:absolute after:h-px after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'} >
                             <Link href={`./journal/${encodeURIComponent(item._id)}/`} className='no-underline'>
                                 <div className='flex justify-between  '>
                                     <h1 className='text-2xl md:text-3xl mb-2 text-gray-700'>
