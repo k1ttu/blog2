@@ -1,6 +1,7 @@
 export default async function getPosts1(){
+    const url = process.env.API_URL
     try{
-        const response = await fetch("http://localhost:3000/api/posts",
+        const response = await fetch(`${url}/api/posts`,
         {
             cache:'no-store'
         }

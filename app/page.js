@@ -4,7 +4,16 @@ import JournalTopics from '@/components/journalHeading';
 import 'animate.css';
 import Link from 'next/link';
 
- export default function Home() {
+export default function Home(){
+  return(
+    <>
+    Hello
+    </>
+  )
+}
+
+
+ {/*export default function Home() {
   const contentFont = "md:text-lg text-base text-gray-700 font-light my-4 mr-8 ";
   return (
     <>
@@ -48,51 +57,4 @@ import Link from 'next/link';
       </footer>
       </>
   )
-}
-
-
-
-// const getPosts = async () => {
-//   try {
-//       const res = await fetch("http://localhost:3000/api/post/",
-//           {
-//               cache: "no-store"
-//           }
-//       );
-//       if (!res.ok) {
-//           throw new Error("Error fetching posts");
-//       }
-//       return res.json();
-//   } catch (e) {
-//       console.log("Error fetching topics: ", e);
-//   }
-// }
-
-// async function JournalTopics() {
-//   const heading = "text-3xl md:text-4xl md:mb-6 lg:mb-7 mb-5 lg:text-5xl text-gray-700";
-//   const { posts } = await getPosts();
-//   const posts2 = posts.reverse();
-//   return (
-//       <p  className="text-3xl md:text-4xl lg:text-5xl text-gray-700">
-//           {
-//               posts.map((item , index)=>{
-//                   if (index == posts.length - 1) {
-//                       return (
-//                               <Link className=" no-underline text-3xl md:text-4xl lg:text-3xl font-light text-gray-700" href={"./journal"} key={item._id}>
-//                                   <span className="hover:underline">{item.title.at(0)}</span>
-//                               </Link>
-//                       )
-//                   }
-//                   else {
-//                       return (
-//                               <Link key={item._id} className={" no-underline text-3xl md:text-4xl lg:text-3xl font-light text-gray-700"} href="./journal">
-
-//                                   <span className="hover:underline">{item.title.at(0)}</span> / {" "}
-//                               </Link>
-//                       )
-//                   }
-//               })
-//           }
-//       </p>
-//   )
-// }
+}*/}

@@ -34,11 +34,11 @@ export default function Navbar3() {
 
     return (
         <nav className='flex justify-between h-px md:mx-16 md:py-10 mx-8 py-4 animate__animated animate__fadeInDown'>
-            
-            <Link href="/" className={navlink_ }>
+
+            <Link href="/" className={navlink_}>
                 Chirag
             </Link>
-            
+
             <ul className='md:flex hidden list-none'>
                 {
                     navbarDB.map((item, index) => {
@@ -54,7 +54,7 @@ export default function Navbar3() {
                     }
                     )
                 }
-                
+
                 <li key={"3"} className={'mr-0'} >
                     <Link href="mailto:chirag.kun@icloud.com" className={navlink}>
                         Contact
